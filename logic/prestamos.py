@@ -99,3 +99,13 @@ def solicitarPrestamo(id_usuario: str, id_equipo: str, fecha_fin: date) -> dict:
     }
 
 
+def devolverEquipo(id_prestamo: str) -> str:
+    """Marca un préstamo como finalizado y libera el equipo."""
+    prestamos = findAll()
+    for prestamo in prestamos:
+        if prestamo.get("id_prestamo") == id_prestamo and prestamo.get("estado") == "activo":
+            prestamo["estado"] = "finalizado"
+            actualizarEstado(prestamo["id_equipo"], "disponible")
+            saveAll(prestamos)
+            return f"Equipo devuelto correctamente. Préstamo {id_prestamo} finalizado."
+    return "Préstamo no encontrado o ya finalizado."

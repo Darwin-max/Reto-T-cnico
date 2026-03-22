@@ -1,5 +1,5 @@
 from logic.usuarios import findByEmail
-from logic.prestamos import solicitarPrestamo, findActivosByUsuario
+from logic.prestamos import solicitarPrestamo, findActivosByUsuario, devolverEquipo
 from logic.equipos import findAll as findAllEquipos
 from datetime import date
 from tabulate import tabulate
@@ -89,3 +89,20 @@ def tablaPrestamosActivos(usuario: dict):
         print("No tienes préstamos activos.")
         return
     print(tabulate(prestamos, headers="keys", tablefmt="grid"))
+
+
+# ──────────────────────────────────────────────
+#  DEVOLVER EQUIPO
+# ──────────────────────────────────────────────
+
+def formularioDevolucion(usuario: dict):
+    """Flujo para devolver un equipo."""
+    prestamos = findActivosByUsuario(usuario["id_usuario"])
+    if not prestamos:
+        print("No tienes préstamos activos para devolver.")
+        return
+    print("── Tus préstamos activos ──")
+    print(tabulate(prestamos, headers="keys", tablefmt="grid"))
+    id_prestamo = input("\nIngresa el ID del préstamo a devolver (ej. PR-001): ").strip().upper()
+    mensaje = devolverEquipo(id_prestamo)
+    print(f"{mensaje}")
