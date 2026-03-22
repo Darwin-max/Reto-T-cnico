@@ -8,9 +8,9 @@ def validar_fecha_fin(fecha_fin: date, fecha_inicio: date) -> dict:
 
 def validar_max_dias(fecha_fin: date, fecha_inicio: date) -> dict:
     """Valida que el préstamo no supere los 14 días."""
-    diferencia = (fecha_fin - fecha_inicio).days
-    if diferencia > 14:
-        return {"valido": False, "mensaje": f"El préstamo no puede superar 14 días. Solicitaste {diferencia} días."}
+    dias_solicitados = (fecha_fin - fecha_inicio).days
+    if dias_solicitados > 14:
+        return {"valido": False, "mensaje": f"El préstamo no puede superar 14 días. Solicitaste {dias_solicitados} días."}
     return {"valido": True}
 
 def validar_fecha_no_pasada(fecha_inicio: date) -> dict:
