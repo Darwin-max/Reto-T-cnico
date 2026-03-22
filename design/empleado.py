@@ -1,5 +1,5 @@
 from logic.usuarios import findByEmail
-from logic.prestamos import solicitarPrestamo
+from logic.prestamos import solicitarPrestamo, findActivosByUsuario
 from logic.equipos import findAll as findAllEquipos
 from datetime import date
 from tabulate import tabulate
@@ -76,3 +76,16 @@ def formularioSolicitarPrestamo(usuario: dict):
                     print(f"{resultado_alt['mensaje']}")
             else:
                 print("Solicitud cancelada.")
+
+
+# ver prestamos activos que el empleado a solicitado   
+
+
+def tablaPrestamosActivos(usuario: dict):
+    """Muestra los préstamos activos del usuario."""
+    prestamos = findActivosByUsuario(usuario["id_usuario"])
+    print("── Tus préstamos activos ──")
+    if not prestamos:
+        print("No tienes préstamos activos.")
+        return
+    print(tabulate(prestamos, headers="keys", tablefmt="grid"))

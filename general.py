@@ -1,5 +1,5 @@
 from design.menu import mostrarMenuPrincipal
-from design.empleado import (formularioLogin, formularioSolicitarPrestamo)
+from design.empleado import (formularioLogin, formularioSolicitarPrestamo, tablaPrestamosActivos)
 
 
 
