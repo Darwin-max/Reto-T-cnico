@@ -1,5 +1,5 @@
 from design.menu import mostrarMenuPrincipal
-from design.empleado import (formularioLogin, formularioSolicitarPrestamo, tablaPrestamosActivos, formularioDevolucion)
+from design.empleado import (formularioLogin, formularioSolicitarPrestamo, tablaPrestamosActivos, formularioDevolucion, tablaEquipos)
 
 
 
@@ -23,6 +23,8 @@ def iniciar():
                 tablaPrestamosActivos(usuario)
             case "3":
                 formularioDevolucion(usuario)
+            case "4":
+                tablaEquipos()
             case "0":
                 print("Sesión cerrada.")
                 break

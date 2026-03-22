@@ -91,9 +91,9 @@ def tablaPrestamosActivos(usuario: dict):
     print(tabulate(prestamos, headers="keys", tablefmt="grid"))
 
 
-# ──────────────────────────────────────────────
-#  DEVOLVER EQUIPO
-# ──────────────────────────────────────────────
+
+#  DEVOLVER EQUIPO PRESTADOS ANTERIORMENTE 
+
 
 def formularioDevolucion(usuario: dict):
     """Flujo para devolver un equipo."""
@@ -106,3 +106,13 @@ def formularioDevolucion(usuario: dict):
     id_prestamo = input("\nIngresa el ID del préstamo a devolver (ej. PR-001): ").strip().upper()
     mensaje = devolverEquipo(id_prestamo)
     print(f"{mensaje}")
+
+def tablaEquipos():
+    """Muestra todos los equipos y su estado."""
+    equipos = findAllEquipos()
+    print("── Equipos de TI ──")
+    print(tabulate(equipos, headers="keys", tablefmt="grid", numalign="center", showindex="always"))
+
+
+#  VER TODOS LOS EQUIPOS YA SOLO QUEDA
+# LLAMAR LA FUNCION DE findAllEquipos QUE RECORRE LA JOSON Y  MUESTAR TODO LO QUE LO COMPONE 
