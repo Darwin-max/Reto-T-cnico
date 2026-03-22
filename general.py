@@ -19,7 +19,9 @@ def iniciar():
         match opcion:
             case "1":
                 formularioSolicitarPrestamo(usuario)
-
+            case "2":
+                tablaPrestamosActivos(usuario)
+    
             case "0":
                 print("Sesión cerrada.")
                 break
