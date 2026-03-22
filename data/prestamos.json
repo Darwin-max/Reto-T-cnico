@@ -1,0 +1,10 @@
+[
+    {
+        "id_prestamo": "PR-001",
+        "id_usuario": "USR-001",
+        "id_equipo": "EQ-001",
+        "fecha_inicio": "2026-03-21",
+        "fecha_fin": "2026-03-23",
+        "estado": "activo"
+    }
+]

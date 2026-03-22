@@ -1,0 +1,23 @@
+[
+    {
+        "id_usuario": "USR-001",
+        "nombre": "Carlos Ramírez",
+        "email": "carlos.ramirez@empresa.com",
+        "cargo": "Desarrollador",
+        "password": "1234"
+    },
+    {
+        "id_usuario": "USR-002",
+        "nombre": "Laura Gómez",
+        "email": "laura.gomez@empresa.com",
+        "cargo": "Diseñadora",
+        "password": "1234"
+    },
+    {
+        "id_usuario": "USR-003",
+        "nombre": "Andrés Torres",
+        "email": "andres.torres@empresa.com",
+        "cargo": "Analista",
+        "password": "1234"
+    }
+]

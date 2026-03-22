@@ -1,0 +1,44 @@
+[
+    {
+        "id_equipo": "EQ-001",
+        "tipo": "Laptop",
+        "marca": "Dell",
+        "modelo": "Latitude 5520",
+        "estado": "prestado"
+    },
+    {
+        "id_equipo": "EQ-002",
+        "tipo": "Laptop",
+        "marca": "Lenovo",
+        "modelo": "ThinkPad E14",
+        "estado": "disponible"
+    },
+    {
+        "id_equipo": "EQ-003",
+        "tipo": "Monitor",
+        "marca": "LG",
+        "modelo": "27UK850",
+        "estado": "disponible"
+    },
+    {
+        "id_equipo": "EQ-004",
+        "tipo": "Monitor",
+        "marca": "Samsung",
+        "modelo": "S27A600",
+        "estado": "disponible"
+    },
+    {
+        "id_equipo": "EQ-005",
+        "tipo": "Tablet",
+        "marca": "Samsung",
+        "modelo": "Galaxy Tab S7",
+        "estado": "disponible"
+    },
+    {
+        "id_equipo": "EQ-006",
+        "tipo": "Tablet",
+        "marca": "Apple",
+        "modelo": "iPad Pro",
+        "estado": "disponible"
+    }
+]
