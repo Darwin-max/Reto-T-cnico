@@ -1,4 +1,6 @@
-from design.empleado import formularioLogin
+from design.menu import mostrarMenuPrincipal
+from design.empleado import (formularioLogin, formularioSolicitarPrestamo)
+
 
 
 def iniciar():
@@ -10,3 +12,16 @@ def iniciar():
     if not usuario:
         print("Acceso denegado. Cerrando sistema.")
         return
+
+    while True:
+        opcion = mostrarMenuPrincipal()
+
+        match opcion:
+            case "1":
+                formularioSolicitarPrestamo(usuario)
+
+            case "0":
+                print("Sesión cerrada.")
+                break
+            case _:
+                print("Opción no válida. Intenta de nuevo.")
