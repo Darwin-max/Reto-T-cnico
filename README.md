@@ -1,4 +1,4 @@
-# Sistema de Préstamo de Equipos de TI 💻
+# Sistema de Préstamo de Equipos de TI 
 
 Sistema interno para que los empleados puedan solicitar en préstamo equipos de TI (Laptops, Monitores, Tablets) por periodos de hasta un máximo de 14 días.
 
@@ -134,6 +134,15 @@ sistema_prestamos/
 ├── .gitignore
 └── README.md
 ```
+## Arquitectura del sistema
+
+El proyecto está dividido en capas:
+
+- **data/** — archivos JSON que simulan la base de datos
+- **logic/** — lógica de negocio (usuarios, equipos, préstamos, lista de espera)
+- **formula/** — validaciones de fechas
+- **design/** — interacción con el usuario (menús y consola)
+
 
 ### Cómo ejecutar
 
